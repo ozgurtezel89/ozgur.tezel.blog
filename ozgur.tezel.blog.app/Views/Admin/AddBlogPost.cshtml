@@ -1,0 +1,53 @@
+﻿@model ozgur.tezel.blog.app.Models.BlogPostAddViewModel
+
+<div>
+    <br />
+    <h3>Add new post page</h3>
+    <br />
+    <form method="post" action="@Url.Content("~/Admin/AddBlogPost")">
+        @Html.AntiForgeryToken()
+        <table cellpadding="3" cellspacing="1" class="table table-bordered">
+
+            <tr>
+                <td> 
+                    @Html.LabelFor(m => m.Author)
+                </td>
+                <td>
+                    @Html.EditorFor(m => m.Author)
+                    @Html.ValidationMessageFor(m => m.Author, null, new { style = "color:red" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.Title)
+                </td>
+                <td>
+                    @Html.EditorFor(m => m.Title)
+                    @Html.ValidationMessageFor(m => m.Title, null, new { style = "color:red" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.Active)
+                </td>
+                <td>
+                    @Html.CheckBoxFor(m => m.Active, true)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.Content)
+                </td>
+                <td>
+                    @Html.TextAreaFor(m => m.Content, 20, 100, null)
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>

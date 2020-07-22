@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ozgur.tezel.blog.app", "ozgur.tezel.blog.app\ozgur.tezel.blog.app.csproj", "{18E9E838-E535-480A-A9B6-39C0EACAC0A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ozgur.tezel.blog.dataAccess", "ozgur.tezel.blog.dataAccess\ozgur.tezel.blog.dataAccess.csproj", "{41AEA525-3172-4FE2-80CD-1279E2CD17AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ozgur.tezel.blog.businessLogic", "ozgur.tezel.blog.services\ozgur.tezel.blog.businessLogic.csproj", "{B9C1688A-BE8B-43A3-A4E5-A36C1C7D37AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0E3F5502-D322-4470-9E10-26771F82C367}"
+	ProjectSection(SolutionItems) = preProject
+		wwwroot\favicon.ico = wwwroot\favicon.ico
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ozgur.tezel.blog.tests", "ozgur.tezel.blog.tests\ozgur.tezel.blog.tests.csproj", "{1A05AAC2-BA72-404C-A6C3-1C150F788731}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18E9E838-E535-480A-A9B6-39C0EACAC0A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18E9E838-E535-480A-A9B6-39C0EACAC0A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18E9E838-E535-480A-A9B6-39C0EACAC0A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18E9E838-E535-480A-A9B6-39C0EACAC0A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41AEA525-3172-4FE2-80CD-1279E2CD17AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41AEA525-3172-4FE2-80CD-1279E2CD17AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41AEA525-3172-4FE2-80CD-1279E2CD17AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41AEA525-3172-4FE2-80CD-1279E2CD17AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9C1688A-BE8B-43A3-A4E5-A36C1C7D37AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9C1688A-BE8B-43A3-A4E5-A36C1C7D37AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9C1688A-BE8B-43A3-A4E5-A36C1C7D37AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9C1688A-BE8B-43A3-A4E5-A36C1C7D37AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A05AAC2-BA72-404C-A6C3-1C150F788731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A05AAC2-BA72-404C-A6C3-1C150F788731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A05AAC2-BA72-404C-A6C3-1C150F788731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A05AAC2-BA72-404C-A6C3-1C150F788731}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {847E00CC-4A04-4C53-80DF-5690279C6676}
+	EndGlobalSection
+EndGlobal

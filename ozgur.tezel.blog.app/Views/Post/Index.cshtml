@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ozgur.tezel.blog.app.Models.PostGeneralDisplayViewModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+
+    <br />
+    <h3>Home page displays only active posts</h3>
+    <br />
+    @if (Model.Any())
+    {
+        <table cellpadding="3" cellspacing="1" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th><strong>Author</strong></th>
+                    <th><strong>Title</strong></th>
+                    <th><strong>Content</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @item.Author
+                        </td>
+                        <td>
+                            @item.Title
+                        </td>
+                        <td>
+                            @item.ShortContent @Html.ActionLink("Read more!", "Details", "Post", new { id = item.Id })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h3>There are no active posts to display!</h3>
+    }
+</div>

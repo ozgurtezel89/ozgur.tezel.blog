@@ -1,0 +1,32 @@
+﻿@model ozgur.tezel.blog.app.Models.PostDetailsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+} 
+
+<div>
+    <table cellpadding="3" cellspacing="1" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th><strong>@Html.LabelFor(model => model.Author)</strong></th>
+                <th><strong>@Html.LabelFor(model => model.Title)</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> @Model.Id</td>
+                <td> @Model.Author </td>
+                <td> @Model.Title </td>
+            </tr>
+        </tbody>
+    </table>
+    <h3><strong>@Html.LabelFor(model => model.Content)</strong></h3>
+    <br />
+    <div class="full-content">
+        @Html.Raw(Model.Content)
+    </div>
+    <div class="btn-primary">
+        @Html.ActionLink("Close", "Index", "Post")
+    </div>  
+</div>

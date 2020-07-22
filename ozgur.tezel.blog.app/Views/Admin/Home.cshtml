@@ -1,0 +1,79 @@
+﻿@model ozgur.tezel.blog.app.Models.AdminAllPostsViewModel
+
+@{
+    ViewData["Title"] = "Admin Page";
+}
+
+    <div>
+        <br />
+        <h3>Admin page displays all active and passive posts</h3>
+        <br />
+        <table cellpadding="3" cellspacing="1" class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td>
+                        Total number of @Model.TotalPosts post(s)!
+                    </td>
+                    <td>
+                        @Html.ActionLink("Add New", "AddBlogPost", "Admin")
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table cellpadding="3" cellspacing="1" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th><strong>Post Id</strong></th>
+                    <th><strong>Author</strong></th>
+                    <th><strong>Title</strong></th>
+                    <th><strong>Content</strong></th>
+                    <th><strong>Status(Active/Passive)</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.AdminAllPosts)
+                {     
+                    @if (item.Active)
+                    {
+                        <tr>
+                            <td>
+                                @item.Id
+                            </td>
+                            <td>
+                                @item.Author
+                            </td>
+                            <td>
+                                @item.Title
+                            </td>
+                            <td>
+                                @item.ShortContent
+                            </td>
+                            <td>
+                                @Html.ActionLink("Active(Please click to change)", "SetPostStatus", "Admin", new { isActive = false, id = item.Id });
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        <tr style="color:red">
+                            <td>
+                                @item.Id
+                            </td>
+                            <td>
+                                @item.Author
+                            </td>
+                            <td>
+                                @item.Title
+                            </td>
+                            <td>
+                                @item.ShortContent
+                            </td>
+                            <td>
+                                @Html.ActionLink("Passive(Please click to change)", "SetPostStatus", "Admin", new { isActive = true, id = item.Id });
+                            </td>
+                        </tr>
+                    }
+                 }
+           </tbody>
+        </table>
+    </div>
